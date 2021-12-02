@@ -8,15 +8,15 @@
         Title="MainWindow" Height="1024" Width="1280" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
     <Grid>
         <Grid Width="1030" x:Name="RightPanel" HorizontalAlignment="Right">
-            <Grid x:Name="PageHeader" Height="150" VerticalAlignment="Top" Background="Wheat">
+            <Grid x:Name="PageHeader" Height="150" VerticalAlignment="Top" Background="LightBlue">
             </Grid>
             <Grid x:Name="PageContent" Height="874" VerticalAlignment="Bottom" Background="White">
             </Grid>
         </Grid>
         <Grid Width="250" x:Name="LeftPanel" HorizontalAlignment="Left">
-            <Grid x:Name="PageLogo" Height="150" VerticalAlignment="Top" Background="Orange">
+            <Grid x:Name="PageLogo" Height="150" VerticalAlignment="Top" Background="PaleGoldenrod">
             </Grid>
-            <Grid x:Name="PageMenu" Height="874" Width="250" VerticalAlignment="Bottom" HorizontalAlignment="Left" Background="Blue">
+            <Grid x:Name="PageMenu" Height="874" Width="250" VerticalAlignment="Bottom" HorizontalAlignment="Left" Background="LightBlue">
 
 
             </Grid>
