@@ -10,4 +10,5 @@
         <TextBlock x:Name="WelcomeText" Text="Üdvözöljük a programban!"></TextBlock>
     </StackPanel>
 
+
 </UserControl>

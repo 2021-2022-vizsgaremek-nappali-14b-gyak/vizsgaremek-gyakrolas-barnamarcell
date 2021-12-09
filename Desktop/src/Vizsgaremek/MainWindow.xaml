@@ -17,16 +17,20 @@
             <Grid x:Name="PageLogo" Height="150" VerticalAlignment="Top" Background="PaleGoldenrod">
             </Grid>
             <Grid x:Name="PageMenu" Height="874" Width="250" VerticalAlignment="Bottom" HorizontalAlignment="Left" Background="LightBlue">
-                <ListView   BorderBrush="Transparent" Background="Transparent">
+                <ListView PreviewMouseLeftButtonUp="ListView_PreviewMouseLeftButtonUp"  BorderBrush="Transparent" Background="Transparent">
                     <ListViewItem FontFamily="Century Gothic" FontSize="40">
                         <TextBlock>
                             Menü 1.
                         </TextBlock>
+                        
                     </ListViewItem>
-                    <ListViewItem FontFamily="Century Gothic" FontSize="40">
-                        <TextBlock>
-                            Kilépés
-                        </TextBlock>
+                    <ListViewItem x:Name="lviExit" FontFamily="Century Gothic" FontSize="40" >
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock>Kilépés</TextBlock>
+                            <Image
+                        Source="/Icon/exit.png" Width="54" Height="48"/>
+                            
+                        </StackPanel>
                     </ListViewItem>
 
                 </ListView>
