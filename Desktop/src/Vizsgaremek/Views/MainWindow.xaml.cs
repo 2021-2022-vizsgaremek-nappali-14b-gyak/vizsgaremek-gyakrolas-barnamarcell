@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using Vizsgaremek.ViewModels;
 using Vizsgaremek.Views.Navigation;
 using Vizsgaremek.Views.Pages;
 
@@ -23,10 +23,17 @@ namespace Vizsgaremek
     /// </summary>
     public partial class MainWindow : Window
     {
-        
+        MainWindowViewModel mainWindowViewModel;
+        DatabaseSourceViewModel databaseSourceViewModel;
+
         public MainWindow()
         {
+            mainWindowViewModel = new MainWindowViewModel();
+            databaseSourceViewModel = new DatabaseSourceViewModel();
+           
             InitializeComponent();
+            // A MainWindow ablkban megjelnő adatok a MainWindowViewModel-ben vannak
+            this.DataContext = mainWindowViewModel;
             // Statikus osztály a Navigate
             // Eltárolja a nyitó ablakt, hogy azon tudjuk módosítani a "page"-ket
             Navigate.mainWindow = this;
@@ -56,7 +63,7 @@ namespace Vizsgaremek
                         Close();
                         break;
                     case "lviDatabaseSouceSelection":
-                        DatabaseSourcePage databaseSourcePage = new DatabaseSourcePage();
+                        DatabaseSourcePage databaseSourcePage = new DatabaseSourcePage(databaseSourceViewModel);
                         Navigate.Navigation(databaseSourcePage);
                         break;
                     case "lviProgramVersion":
