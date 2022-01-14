@@ -10,11 +10,10 @@ namespace Vizsgaremek.ViewModels
     {
         private string selectedSource;
 
-        public string SelectedSource
-        {
-            get => selectedSource;
-            set => selectedSource = value;
+        public string SelectedSource 
+        { 
+            get => selectedSource; 
+            set => selectedSource = value; 
         }
-
     }
 }

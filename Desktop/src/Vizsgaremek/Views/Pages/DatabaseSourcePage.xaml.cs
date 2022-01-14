@@ -24,6 +24,7 @@ namespace Vizsgaremek.Views.Pages
     public partial class DatabaseSourcePage : UserControl
     {
         DatabaseSourceViewModel databaseSourceViewModel;
+
         public DatabaseSourcePage(DatabaseSourceViewModel databaseSourceViewModel)
         {
             this.databaseSourceViewModel = databaseSourceViewModel;

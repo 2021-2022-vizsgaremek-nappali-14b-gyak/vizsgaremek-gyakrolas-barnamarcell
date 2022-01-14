@@ -12,9 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Vizsgaremek.ViewModels;
+
 using Vizsgaremek.Views.Navigation;
 using Vizsgaremek.Views.Pages;
+using Vizsgaremek.ViewModels;
 
 namespace Vizsgaremek
 {
@@ -28,11 +29,12 @@ namespace Vizsgaremek
 
         public MainWindow()
         {
+            // Különböző ablakok adatai
             mainWindowViewModel = new MainWindowViewModel();
             databaseSourceViewModel = new DatabaseSourceViewModel();
-           
+            mainWindowViewModel.SelectedSource = databaseSourceViewModel.DisplayedDatabaseSource;
             InitializeComponent();
-            // A MainWindow ablkban megjelnő adatok a MainWindowViewModel-ben vannak
+            // A MainWindow ablakban megjelenő adatok a MainWindowViewModel-ben vannak
             this.DataContext = mainWindowViewModel;
             // Statikus osztály a Navigate
             // Eltárolja a nyitó ablakt, hogy azon tudjuk módosítani a "page"-ket
